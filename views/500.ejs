@@ -1,0 +1,66 @@
+<!--
+555555555555555555      000000000          000000000
+5::::::::::::::::5    00:::::::::00      00:::::::::00
+5::::::::::::::::5  00:::::::::::::00  00:::::::::::::00
+5:::::555555555555 0:::::::000:::::::00:::::::000:::::::0
+5:::::5            0::::::0   0::::::00::::::0   0::::::0
+5:::::5            0:::::0     0:::::00:::::0     0:::::0
+5:::::5555555555   0:::::0     0:::::00:::::0     0:::::0
+5:::::::::::::::5  0:::::0 000 0:::::00:::::0 000 0:::::0
+555555555555:::::5 0:::::0 000 0:::::00:::::0 000 0:::::0
+            5:::::50:::::0     0:::::00:::::0     0:::::0
+            5:::::50:::::0     0:::::00:::::0     0:::::0
+5555555     5:::::50::::::0   0::::::00::::::0   0::::::0
+5::::::55555::::::50:::::::000:::::::00:::::::000:::::::0
+ 55:::::::::::::55  00:::::::::::::00  00:::::::::::::00
+   55:::::::::55      00:::::::::00      00:::::::::00
+     555555555          000000000          000000000
+-->
+<style>
+  html, body {
+    font-size: 1em;
+    text-align: left;
+    font-family: "Open Sans", "Myriad Pro", Arial, sans-serif;
+  }
+
+  html, body, h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding: 0 2%;
+    margin: 0 auto;
+  }
+
+  code.error {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    font-size: .8em;
+    font-weight: 300;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: -moz-pre-wrap;
+    outline: 1px solid #ced7d6;
+    font-family: Monaco, monospace;
+  }
+
+</style>
+
+<div class="container">
+  <h1>
+    Internal Server Error
+  </h1>
+  <% if (typeof data !== 'undefined') { %>
+  <code class="error">
+    <%- data %>
+  </code>
+  <% } else { %>
+  <code class="error">
+    Something isn't right here.
+  </code>
+  <% } %>
+</div>
