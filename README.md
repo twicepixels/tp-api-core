@@ -1,4 +1,4 @@
-# TwicePixels API basada en NodeJs
+# TwicePixels API
 
 A [Sails](http://sailsjs.org) application.
 
