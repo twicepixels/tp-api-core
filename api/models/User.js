@@ -1,11 +1,16 @@
 var bcrypt = require('bcrypt');
 module.exports = {
 
-  // connection: 'twiceMysqlServer',
-  // tableName: 'client',
-
+  autoPK: false,
+  tableName: 'tpuser',
 
   attributes: {
+    id: {
+      type: 'int',
+      unique: true,
+      primaryKey: true,
+      columnName: 'userId'
+    },
     username: {
       type: 'string',
       unique: true,
@@ -21,15 +26,14 @@ module.exports = {
     password: {
       type: 'string',
       required: true,
-      columnName: 'encrypted_password',
       minLength: 8
     },
 
-    first_name: {
+    firstName: {
       type: 'string'
     },
 
-    last_name: {
+    lastName: {
       type: 'string'
     },
 
@@ -37,11 +41,11 @@ module.exports = {
       type: 'string'
     },
 
-    date_registered: {
+    createdAt: {
       type: 'date'
     },
 
-    date_verified: {
+    verifiedAt: {
       type: 'date'
     },
 
@@ -53,6 +57,7 @@ module.exports = {
   },
 
   beforeCreate: function (user, next) {
+    user.createdAt = new Date();
     if (user.hasOwnProperty('password')) {
       bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(user.password, salt, function (err, hash) {

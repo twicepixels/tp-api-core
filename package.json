@@ -2,7 +2,7 @@
   "name": "twicepixels-core",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "Twicepixels API",
   "keywords": [],
   "dependencies": {
     "bcrypt": "^0.8.7",
@@ -21,6 +21,7 @@
     "sails": "~0.12.3",
     "sails-disk": "~0.10.9",
     "sails-mongo": "^0.12.0",
+    "sails-mysql": "^0.11.5",
     "winston": "^2.2.0"
   },
   "scripts": {

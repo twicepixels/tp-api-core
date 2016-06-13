@@ -17,10 +17,10 @@ module.exports.connections = {
     password: '!twiceAdm001',
     database: 'twicepixels'
   },
-  mongo: {
+  twiceMongoServer: {
     adapter: 'sails-mongo',
     host: 'localhost',
     port: 27017,
-    database: 'twicepixelsImg'
+    database: 'twicepixels'
   }
 };

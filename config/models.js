@@ -3,5 +3,4 @@ module.exports.models = {
   autoCreatedAt: false,
   autoUpdatedAt: false,
   migrate: 'safe'
-
 };
